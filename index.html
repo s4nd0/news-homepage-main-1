@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+</head>
+
+<body>
+  <main>
+    <div class="header">
+      <img src="./assets/images/logo.svg" alt="">
+      <div class="dropdown">
+        <button id="list-button" class="mobile-list" onclick="dropList()"></button>
+
+        <div class="dropdown-content">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">New</a></li>
+            <li><a href="">Popular</a></li>
+            <li><a href="">Trending</a></li>
+            <li><a href="">Categories</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="desktop-menu">
+        <a href="">Home</a>
+        <a href="">New</a>
+        <a href="">Popular</a>
+        <a href="">Trending</a>
+        <a href="">Categories</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <img id="web3-mobile" src="./assets/images/image-web-3-mobile.jpg" alt="">
+      <img id="web3-desktop" src="./assets/images/image-web-3-desktop.jpg" alt="">
+
+      <h1>The Bright Future of Web 3.0?</h1>
+
+      <div id="grid-read-more">
+        <p id="read-more-paragraph">We dive into the next evolution of the web that claims to put the power
+          of the platforms back into the hands of the people. But is it really fulfilling its promise?
+        </p>
+        <button id="read-more-button">read more</button>
+      </div>
+
+      <div id="grid-new">
+        <h2>New</h2>
+        <div class="new-content">
+          <a href="">Hydrogen VS Electric Cars</a>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="new-content">
+          <a href="">The Downsides of AI Artistry</a>
+          <p>What are the possible adverse effects of
+            on-demand AI image generation?
+          </p>
+        </div>
+        <div class="new-content">
+          <a href="">Is VC Funding Drying Up?</a>
+          <p>Private funding by VC firms is down 50% YOY. 
+            We take a look at what that means.
+          </p>
+        </div>
+      </div>
+
+      
+    </div> 
+
+    <div id="flex-bottom">
+      <div class="bottom-content">
+        <img src="./assets/images/image-retro-pcs.jpg" alt="image-retro-pcs">
+        <div>
+          <p class="bottom-content-number">01</p>
+          <a class="bottom-content-title" href="">Reviving Retro PCs</a>
+          <p class="bottom-content-text">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="bottom-content">
+        <img src="./assets/images/image-top-laptops.jpg" alt="image-top-laptops">
+        <div>
+          <p class="bottom-content-number">02</p>
+          <a class="bottom-content-title" href="">Top 10 Laptops of 2022</a>
+          <p class="bottom-content-text">Our best picks for various need and budgets.</p>
+        </div>
+      </div>
+      <div class="bottom-content">
+        <img src="./assets/images/image-gaming-growth.jpg" alt="image-gaming-growth">
+        <div>
+          <p class="bottom-content-number">03</p>
+          <a class="bottom-content-title" href="">The Growth of Gaming</a>
+          <p class="bottom-content-text">How the pandemic has sparked fresh opportunites</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+
+    var btn = document.getElementById("list-button");
+    var drop = document.getElementsByClassName("dropdown-content")[0];
+
+    function dropList()
+    {
+      if(drop.style.display == "block")
+      {
+        drop.style.display = "none";
+        btn.style.backgroundImage = "url(./assets/images/icon-menu.svg)";
+        btn.style.backgroundSize = "cover";
+      }
+      else
+      {
+        drop.style.display = "block";       
+        btn.style.backgroundImage = "url(./assets/images/icon-menu-close.svg)";
+        btn.style.backgroundSize = "contain";
+      }
+    }
+  </script>
+
+</body>
+</html>
